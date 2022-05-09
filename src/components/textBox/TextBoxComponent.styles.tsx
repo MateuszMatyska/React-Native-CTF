@@ -6,7 +6,11 @@ export const styles: any = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  elementContainer: {
-    width: '60%',
-  }
+  textBox: {
+    color: '#0000FF',
+    fontWeight: 'bold',
+    textAlign: 'left',
+    padding: 15,
+    fontSize: 44,
+  },
 });
