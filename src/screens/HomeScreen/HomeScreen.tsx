@@ -9,6 +9,7 @@ const HomeScreen: React.FC<any> = () => {
         <View>
             <ButtonComponent value={'WebView Screen'} onPress={() => {navigate('WebView')}} />
             <ButtonComponent value={'Storage Screen'} onPress={() => {navigate('Storage')}} />
+            <ButtonComponent value={'DeepLink Screen'} onPress={() => {navigate('DeepLink', {follow: false})}} />
         </View>
     </SafeAreaView>
 }

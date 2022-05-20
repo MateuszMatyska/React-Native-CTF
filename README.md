@@ -7,3 +7,4 @@ This is my very first React Native CTF app. But you don't need to find any flags
 * No Root Detection
 * Unsecure storage
 * Unsecure webview
+* DeepLink with action

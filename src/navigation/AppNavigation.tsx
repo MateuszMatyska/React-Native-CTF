@@ -4,6 +4,7 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import LoginScreen from '../screens/LoginScreen/LoginScreen';
 import WebViewScreen from '../screens/WebViewScreen/WebViewScreen';
 import StorageScreen from '../screens/StorageScreen/StorageScreen';
+import FollowDeepLink from '../screens/FollowDeepLink/FollowDeepLinkScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -13,6 +14,7 @@ const ApplicationStack: React.FC<any> = () => (
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="WebView" component={WebViewScreen} />
     <Stack.Screen name="Storage" component={StorageScreen} />
+    <Stack.Screen name="DeepLink" component={FollowDeepLink} />
   </Stack.Navigator>
 );
 
