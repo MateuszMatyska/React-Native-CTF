@@ -7,6 +7,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.Callback;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -21,15 +22,15 @@ public class SecretCodeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public boolean checkSecretCode(String code) {
-        if (checkPin(code)) {
-            return true
+    public void checkSecretCode(String pin, Callback success, Callback fail) {
+        byte[] bytes = android.util.Base64.decode("NDg2Mw==", android.util.Base64.DEFAULT);
+        String code = new String(bytes, android.util.Base64.DEFAULT);
+        if (new String(pin).equals(code)) {
+            success.invoke();
         }
-
-        return false
-    }
-
-    private boolean checkPin(String pin) {
-        return pin == String(android.util.Base64.decode("NDg2Mw==", android.util.Base64.DEFAULT))
+        else {
+            fail.invoke();
+        }
+        
     }
 }
