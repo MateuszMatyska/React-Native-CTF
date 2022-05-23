@@ -8,3 +8,4 @@ This is my very first React Native CTF app. But you don't need to find any flags
 * Unsecure storage
 * Unsecure webview
 * DeepLink with action
+* ONLY FOR ANDROID - Bridge Code Bypass.
